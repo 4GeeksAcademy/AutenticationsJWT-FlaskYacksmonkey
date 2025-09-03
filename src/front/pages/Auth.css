@@ -1,0 +1,146 @@
+.auth-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  background-color: #0d0d0d;
+  color: white;
+  overflow: hidden;
+}
+
+/* Imagen Rocket */
+.auth-image {
+  flex: 1;
+  position: relative;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-image::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(#ff2f0083), transparent 70%);
+  z-index: 0;
+}
+
+.auth-image img {
+  max-width: 80%;
+  max-height: 80%;
+  z-index: 1;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 187, 0, 0.558);
+}
+
+/* ---------------------- */
+/* FORMULARIO */
+/* ---------------------- */
+
+.auth-form-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  perspective: 1200px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  height: 440px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.auth-card.login {
+  transform: rotateY(0deg);
+}
+
+.auth-card.register {
+  transform: rotateY(180deg);
+}
+
+.auth-side {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: #111;
+  padding: 2rem;
+  border-left: 4px solid #ffcc00;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-side h2 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.auth-side input,
+.auth-side button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.auth-side input {
+  background-color: #222;
+  color: white;
+}
+
+.auth-side button {
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-side button:hover {
+  background-color: #e6b800;
+}
+
+.auth-side p {
+  text-align: center;
+  color: #ffcc00;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.auth-side.back {
+  transform: rotateY(180deg);
+}
+
+/* ---------------------- */
+/* RESPONSIVE */
+/* ---------------------- */
+
+@media screen and (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+  }
+
+  .auth-image {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    height: auto;
+  }
+
+  .auth-form-wrapper {
+    padding: 1rem;
+  }
+}

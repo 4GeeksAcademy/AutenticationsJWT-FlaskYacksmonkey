@@ -36,3 +36,8 @@ export default function storeReducer(store, action = {}) {
       throw Error('Unknown action.');
   }    
 }
+
+{
+  isAuthenticated: false;
+  user: null;
+}

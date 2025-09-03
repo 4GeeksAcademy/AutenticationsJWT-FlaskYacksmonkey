@@ -1,0 +1,82 @@
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  text-align: center;
+}
+
+.main-panel {
+  max-width: 600px;
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(255, 204, 0, 0.2);
+  border: 2px solid #ffcc00;
+}
+
+h1 {
+  color: #ffcc00;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.rocket-container {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.rocket {
+  width: 150px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.fly {
+  animation: launch 2s ease-in-out forwards;
+}
+
+@keyframes launch {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-300px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.launch-btn {
+  margin-top: 1rem;
+  background-color: #ffcc00;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.launch-btn:hover {
+  background-color: #e6b800;
+}
+
+.logout-btn {
+  margin-top: 2rem;
+  background-color: transparent;
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ffcc00;
+  color: #111;
+}
